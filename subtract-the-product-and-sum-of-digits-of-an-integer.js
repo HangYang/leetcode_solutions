@@ -17,14 +17,13 @@ Result = 24 - 9 = 15
  * @return {number}
  */
 var subtractProductAndSum = function (n) {
-    let str = "" + n
-    let arr = str.split('')
+    let arr = ("" + n).split('')
     let product = 1
     let sum = 0
     arr.forEach((a, i) => {
-        const num = Number(a)
+        const num = +a
         product *= num
         sum += num
     })
-    return sum - product
+    return product - sum
 };
